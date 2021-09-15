@@ -44,7 +44,7 @@ app.get("/all", function (req, res) {
 
 let data = [];
 
-app.post("/weatherData", function (req, res) {
+app.post("/create", function (req, res) {
   data.push(req.body);
   projectData["newEntry"] = data;
 });
