@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="general.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather Journal App</h1>
+      <div class="grid">
+        <div class="contentbox">
+          <label for="zip"> Enter Zipcode here</label>
+          <input
+            type="text"
+            id="zip"
+            placeholder=" Enter zip code here"
+            required
+          />
+          <label for="feelings">How are you feeling today?</label>
+          <textarea
+            class="myInput"
+            id="feelings"
+            placeholder=" Enter your feelings here"
+            cols="20"
+            rows="4"
+          ></textarea>
+          <button class="btn-cta" id="generate" type="submit">Generate</button>
+        </div>
+        <div class="contentbox">
+          <div class="title">Most Recent Entry</div>
+          <div id="location">Location</div>
+          <div id="date">Date</div>
+          <div id="temp">Temperature</div>
+          <div id="description">Description</div>
+          <div id="content">How I'm Feeling</div>
+          <div id="icon"></div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+.container {
+  background-color: #fff;
+  padding: 3.6rem;
+}
+
+.grid {
+  max-width: 130rem;
+  display: grid;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 7.2rem;
+}
+
+.contentbox {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  gap: 2.4rem;
+}
+
+.contentbox label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.contentbox input,
+.contentbox textarea,
+.contentbox select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #eae7dc;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contentbox input::placeholder,
+.contentbox textarea::placeholder {
+  color: #aaa;
+}
+
+button {
+  background-color: #ba665d;
+  /* align-self: end; */
+  padding: 1.2rem;
+}
+
+.cta-text-box {
+  padding: 2.4rem 4.8rem 2.4rem 2.4rem;
+}
+
+.btn-cta,
+.btn-cta:link,
+.btn-cta:visited {
+  display: inline-block;
+  background-color: #e98074;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  font-weight: 500;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+  margin-bottom: 4.8rem;
+}
+
+.btn-cta:hover,
+.btn-cta:active {
+  background-color: #d27368;
+}
+
+h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  color: #343432;
+  margin: 4.8rem 0 4.8rem 0;
+  padding-left: 3.2rem;
+}
+
+.myInput {
+  margin-bottom: 2.4rem;
+}
+
+.title {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+#location,
+#date,
+#temp,
+#description {
+  font-size: 1.4rem;
+  padding: 0 0 1.2rem 0;
+}
+
+#content {
+  font-size: 1.4rem;
+}
+
+#icon {
+}
+/* .entry {
+  background: rgba(59, 74, 107, 0.4);
+}
+
+#entryHolder {
+  font-size: 20px;
+  font-family: serif;
+  border: 2px solid red;
+  height: 50vh;
+}
+
+#date {
+  font-size: 20px;
+  font-family: serif;
+}
+
+#temp {
+  font-size: 20px;
+  font-family: serif;
+}
+
+#content {
+  font-size: 20px;
+  font-family: serif;
+}
+
+.headline {
+  font-size: 20px;
+  font-family: serif;
+}
+.title {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+} */
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+/* label {
+  display: block;
+  font-size: 27px;
+}
+
+input {
+  display: block;
+  height: 60px;
+  width: 320px;
+  background: #22b2da;
+  color: #f0d43a;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  border: none;
+}
+
+button {
+  width: 400px;
+  height: 100px;
+  background: #3b4a6b;
+  color: #f0d43a;
+  font-size: 26px;
+  font-family: "Oswald", sans-serif;
+  border: none;
+  box-shadow: 2px 4px 5px #444;
+}
+h1 {
+  font-size: 36px;
+}
+
+textarea {
+  background: #22b2da;
+  color: #f0d43a;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+} */
+/* Reset style for HTML element on active to have no border*/
+/* input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+/* Style for Placeholder Text*/
+/* ::placeholder { */
+/* Firefox, Chrome, Opera */
+/* color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+} */
+
+/* :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+/* color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+} */
+
+/* ::-ms-input-placeholder {
+  /* Microsoft Edge */
+/* color: #f0d43a;
+  font-family: "Oswald", sans-serif;
+} */
