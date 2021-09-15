@@ -90,7 +90,7 @@ const updateUI = async () => {
     }`;
     document.getElementById("date").innerHTML = `Date: ${
       allData.newEntry[allData.newEntry.length - 1].date
-    }  (dd/mm/yy)`;
+    }  (dd/mm/yyyy)`;
     document.getElementById("temp").innerHTML = `Temperature: ${
       allData.newEntry[allData.newEntry.length - 1].temp
     } Celsius`;
