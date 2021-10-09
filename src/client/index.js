@@ -1,5 +1,4 @@
-import { checkForName } from "./js/nameChecker";
-import { handleSubmit } from "./js/formHandler";
+import { postData } from "./js/app";
 
 import "./styles/general.scss";
 import "./styles/style.scss";
@@ -9,4 +8,4 @@ import "./styles/style.scss";
 
 console.log(checkForName);
 
-export { checkForName, handleSubmit };
+export { postData };
