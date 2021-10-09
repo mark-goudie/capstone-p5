@@ -3,7 +3,7 @@
 // URL endpoint (Zip) //
 
 const baseURL = "https://api.openweathermap.org/data/2.5/weather?zip=";
-const apiKey = ",us&APPID=a1e49d3d4d260adc7270879910d76956&units=metric";
+const apiKey = "refer .env";
 
 // Create a new date instance dynamically with JS //
 
