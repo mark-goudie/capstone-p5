@@ -12,8 +12,8 @@ module.exports = {
   stats: "verbose",
   output: {
     path: path.resolve(process.cwd(), "dist"),
-    libraryTarget: "var",
-    library: "Client",
+    // libraryTarget: "var",
+    // library: "Client",
   },
   module: {
     rules: [

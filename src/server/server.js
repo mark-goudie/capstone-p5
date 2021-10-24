@@ -1,10 +1,15 @@
-// Environment variables
-const dotenv = require("dotenv");
-dotenv.config();
-
 // Setup empty JS object to act as endpoint for all routes
 
 let projectData = {};
+
+// Environment variables
+
+const dotenv = require("dotenv");
+dotenv.config();
+
+const GEONAMES_USERNAME = process.env.GEONAMES_USERNAME;
+const WEATHERBIT_API_KEY = process.env.WEATHERBIT_API_KEY;
+const PIXABAY_API_KEY = process.env.PIXABAY_API_KEY;
 
 // Require Express to run server and routes
 
@@ -31,17 +36,49 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static("dist"));
 
+app.get("/", function (req, res) {
+  res.sendFile(path.resolve("dist/index.html"));
+});
+
 // Setup Server
 
-const port = 8080;
-const server = app.listen(port, () =>
-  console.log(`Server running on localhost:${port}`)
-);
+app.get("/getKey", (req, res) => {
+  res.send({
+    GEONAMES_USERNAME: GEONAMES_USERNAME,
+    WEATHERBIT_API_KEY: WEATHERBIT_API_KEY,
+    PIXABAY_API_KEY: PIXABAY_API_KEY,
+  });
+});
 
-// Get request
+const port = 3000;
+const server = app.listen(port, () =>
+  console.log(`Server is running on localhost:${port}`)
+);
+console.log(`Geonames:${GEONAMES_USERNAME}`);
+console.log(`Weatherbit:${WEATHERBIT_API_KEY}`);
+console.log(`Pixabay:${PIXABAY_API_KEY}`);
+
+// Post response
+
+// let data = [];
+
+// app.post("/addWeather", (req, res) => {
+//   console.log(req.body);
+//   projectData = req.body;
+//   res.send(projectData);
+// });
+
+// // Callback function to complete GET '/all'
+// app.get("/getData", (req, res) => {
+//   res.send(projectData);
+//   console.log("Retrieve projectData");
+// });
+
+//Get request
 
 app.get("/all", function (req, res) {
   res.send(projectData);
+  console.log("Get Project Data");
 });
 
 // Post response
@@ -49,6 +86,7 @@ app.get("/all", function (req, res) {
 let data = [];
 
 app.post("/create", function (req, res) {
-  data.push(req.body);
-  projectData["newEntry"] = data;
+  console.log(req.body);
+  projectData = req.body;
+  res.send(projectData);
 });
