@@ -27,23 +27,25 @@
 
     <main>
       <div class="form">
-        <div class="arrival_date">
-          <label for="date">Arrival Date: </label>
-          <input type="date" id="arrival">
-        </div>
+        <div id="dateToday"></div>
         <div class="departure_date">
           <label for="date">Departure Date: </label>
           <input type="date" id="departure">
         </div>
+        <div class="arrival_date">
+          <label for="date">Arrival Date: </label>
+          <input type="date" id="arrival">
+        </div>
         <div class="holder_city">
-          <label for="city">Destination: </label>
-          <input type="text" id="city" placeholder="enter your destination here">
+          <label for="cityInput">Destination: </label>
+          <input type="text" id="cityInput" placeholder="enter your destination here">
         </div>
         <button class="btn-grad" id="search" type="submit">Go!</button>
       </div>
       <div class="holder_entry">
         <img id="picture" src="" class="responsive"></img>
-        <div id="cityRes"></div>
+        <div id="icon"></div>
+        <div id="city"></div>
         <div id="days"></div>
         <div id="tripLength"></div>
         <div id="capital"></div>
