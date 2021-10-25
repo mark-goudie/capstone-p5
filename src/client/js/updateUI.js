@@ -10,7 +10,9 @@ const updateUI = async (webformatURL) => {
     document.getElementById("picture").src = webformatURL;
     document.getElementById("picture").alt = allData.city;
     document.getElementById("icon").innerHTML = `<img src=${allData.icon}>`;
-    document.getElementById("map").innerHTML = `<img src=${allData.map}>`;
+    document.getElementById(
+      "map"
+    ).innerHTML = `<img src=${allData.map} class="map">`;
     document.getElementById(
       "city"
     ).innerHTML = `Your destination is: ${allData.city}`;

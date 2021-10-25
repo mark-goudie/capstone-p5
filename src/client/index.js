@@ -6,6 +6,7 @@ import { getTripLength } from "./js/getTripLength";
 import { updateUI } from "./js/updateUI";
 import "../client/styles/style.scss";
 import "../client/styles/general.scss";
+import "../client/styles/queries.scss";
 
 export {
   generateCoordinates,
