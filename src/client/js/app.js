@@ -1,5 +1,6 @@
 import { getCountdown } from "./getCountdown";
 import { getTripLength } from "./getTripLength";
+import { updateUI } from "./updateUI";
 
 // Create a new date instance dynamically with JS //
 
@@ -33,11 +34,13 @@ const GOOGLE_API_KEY = "AIzaSyCTjMUnkF9ycmBqFcgIWKET8xDx9gCz_qU";
 
 // Event listener to add function to existing HTML DOM element
 
-document.getElementById("search").addEventListener("click", generateCoords);
+document
+  .getElementById("search")
+  .addEventListener("click", generateCoordinates);
 
 // Function called by event listener //
 
-export async function generateCoords(e) {
+export async function generateCoordinates(e) {
   e.preventDefault();
 
   const cityInput = document.getElementById("cityInput").value;
@@ -173,43 +176,6 @@ export const postData = async (url = "", data = {}) => {
     const newWeatherData = await response.json();
     console.log(newWeatherData);
     return newWeatherData;
-  } catch (error) {
-    console.log("error", error);
-  }
-};
-
-// Function to update UI //
-
-const updateUI = async (webformatURL) => {
-  const request = await fetch("http://localhost:3000/all");
-  try {
-    const allData = await request.json();
-    document.getElementById(
-      "dateToday"
-    ).innerHTML = `Today's date: ${allData.dateToday}  (dd/mm/yyyy)`;
-    document.getElementById("picture").src = webformatURL;
-    document.getElementById("picture").alt = allData.city;
-    document.getElementById("icon").innerHTML = `<img src=${allData.icon}>`;
-    document.getElementById("icon").innerHTML = `<img src=${allData.map}>`;
-    document.getElementById(
-      "city"
-    ).innerHTML = `Your trip's destination is: ${allData.city}`;
-    document.getElementById(
-      "days"
-    ).innerHTML = `Only ${allData.days} days to go!`;
-    document.getElementById(
-      "tripLength"
-    ).innerHTML = `Your trip will last ${allData.tripLength} days`;
-    document.getElementById(
-      "capital"
-    ).innerHTML = `This capital city is: ${allData.capital}`;
-    document.getElementById(
-      "country"
-    ).innerHTML = `Country: ${allData.countryData}`;
-    // if (allData.days <= 7) {
-    document.getElementById(
-      "currentWeather"
-    ).innerHTML = `Current weather is: ${allData.weatherData.data[0].temp}°C`;
   } catch (error) {
     console.log("error", error);
   }

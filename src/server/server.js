@@ -10,6 +10,8 @@ dotenv.config();
 const GEONAMES_USERNAME = process.env.GEONAMES_USERNAME;
 const WEATHERBIT_API_KEY = process.env.WEATHERBIT_API_KEY;
 const PIXABAY_API_KEY = process.env.PIXABAY_API_KEY;
+const REST_API_KEY = process.env.REST_API_KEY;
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
 // Require Express to run server and routes
 
@@ -47,6 +49,8 @@ app.get("/getKey", (req, res) => {
     GEONAMES_USERNAME: GEONAMES_USERNAME,
     WEATHERBIT_API_KEY: WEATHERBIT_API_KEY,
     PIXABAY_API_KEY: PIXABAY_API_KEY,
+    REST_API_KEY: REST_API_KEY,
+    GOOGLE_API_KEY: GOOGLE_API_KEY,
   });
 });
 
@@ -57,28 +61,14 @@ const server = app.listen(port, () =>
 console.log(`Geonames:${GEONAMES_USERNAME}`);
 console.log(`Weatherbit:${WEATHERBIT_API_KEY}`);
 console.log(`Pixabay:${PIXABAY_API_KEY}`);
-
-// Post response
-
-// let data = [];
-
-// app.post("/addWeather", (req, res) => {
-//   console.log(req.body);
-//   projectData = req.body;
-//   res.send(projectData);
-// });
-
-// // Callback function to complete GET '/all'
-// app.get("/getData", (req, res) => {
-//   res.send(projectData);
-//   console.log("Retrieve projectData");
-// });
+console.log(`Rest Countries:${REST_API_KEY}`);
+console.log(`Google:${GOOGLE_API_KEY}`);
 
 //Get request
 
 app.get("/all", function (req, res) {
   res.send(projectData);
-  console.log("Get Project Data");
+  console.log("Project Data");
 });
 
 // Post response
