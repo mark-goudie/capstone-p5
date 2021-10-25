@@ -15,9 +15,7 @@ const GEONAMES_USERNAME = "markgoudie";
 // Weatherbit data //
 
 const WEATHERBIT_API_KEY = "07baaa66d9474c75b4e1b85d129a82ec";
-// const weatherbitForecast = " http://api.weatherbit.io/v2.0/forecast/daily?";
 const weatherbitURL = "http://api.weatherbit.io/v2.0/current?";
-// let weatherbitURL = "";
 
 // Pixabay data //
 
@@ -64,7 +62,10 @@ export async function generateCoords(e) {
     countryData
   );
 
-  const mapData = await getMapData(googleMapsURL, GOOGLE_API_KEY, cityInput);
+  // Google Maps API data //
+
+  const map =
+    googleMapsURL + cityInput + "&zoom=12&size=400x400&key=" + GOOGLE_API_KEY;
 
   const pixData = await getPicture(pixabayURL, PIXABAY_API_KEY, cityInput);
 
@@ -84,7 +85,7 @@ export async function generateCoords(e) {
     days: countdown,
     tripLength: tripLength,
     picture: pixData,
-    map: mapData,
+    map: map,
     icon: imageURL,
   });
   updateUI(pixData.hits[1].webformatURL);
@@ -158,23 +159,6 @@ export const getPicture = async (pixabayURL, PIXABAY_API_KEY, cityInput) => {
   }
 };
 
-// Google Maps API data //
-
-export const getMapData = async (googleMapsURL, GOOGLE_API_KEY, cityInput) => {
-  const response = await fetch(
-    `${googleMapsURL}${cityInput}&zoom=12&size=400x400&key=${GOOGLE_API_KEY}`
-  );
-  try {
-    const data = await response.json();
-    console.log(data);
-    return data;
-  } catch (error) {
-    console.log("error", error);
-  }
-};
-
-// Function to POST data - Boilerplate from course content //
-
 export const postData = async (url = "", data = {}) => {
   console.log("API Data: ", data);
   const response = await fetch(url, {
@@ -207,6 +191,7 @@ const updateUI = async (webformatURL) => {
     document.getElementById("picture").src = webformatURL;
     document.getElementById("picture").alt = allData.city;
     document.getElementById("icon").innerHTML = `<img src=${allData.icon}>`;
+    document.getElementById("icon").innerHTML = `<img src=${allData.map}>`;
     document.getElementById(
       "city"
     ).innerHTML = `Your trip's destination is: ${allData.city}`;
