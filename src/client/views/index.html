@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Capstone Project - Travel App</title>
 
+    <link rel="shortcut icon" href="#">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,46 +16,57 @@
   </head>
 
 <body>
-  <div id="container">
-    <h1>
-      Travel Planner
-    </h1>
-    <header>
-      <h2>
-        Plan your next holiday adventure!
-      </h2>
-    </header>
+  <main class="container">
+    <div class="container">
+      <h1> Travel Planner </h1>
+        <div class="grid">
+          <div class = "contentbox">
+            <div id="dateToday"></div>
 
-    <main>
-      <div class="form">
-        <div id="dateToday"></div>
-        <div class="departure_date">
-          <label for="date">Departure Date: </label>
-          <input type="date" id="departure">
+            <form class="">
+              <label for="departure">When you would like to depart?</label>
+
+<!-- 
+              <div class="form">
+                <div class="departure_date"> -->
+                  
+                  <!-- <label for="date">Departure Date: </label> -->
+                  
+                  <input id="departure" type="date" value="" placeholder="dd/mm/yyyy">
+                <!-- </div>
+                <div class="arrival_date"> -->
+                  <label for="arrival">When would you like to arrive?</label>
+                  <input id="arrival" type="date" value="" placeholder="dd/mm/yyyy">
+                <!-- </div>
+                <div class="holder_city"> -->
+                  <label for="cityInput">Please enter your desired destination:</label>
+                  <input id="cityInput" type="text" name="input" value="" placeholder="Example: Melbourne">
+                <!-- </div> -->
+                <button class="btn-cta" id="generate" type="submit" value="submit">Let's Go!</button>
+              </form>
+            </div>
+          <div class="holder_entry">
+            <img id="picture" src="" class="responsive"></img>
+          </div>
+          </div>
+          <div class="container">
+
+            <div id="icon"></div>
+            <div id="city"></div>
+            <div id="days"></div>
+            <div id="tripLength"></div>
+            <div id="capital"></div>
+            <div id="country"></div>
+            <div id="currentWeather"></div>
+            <div id="map"></div>
+          </div>
         </div>
-        <div class="arrival_date">
-          <label for="date">Arrival Date: </label>
-          <input type="date" id="arrival">
-        </div>
-        <div class="holder_city">
-          <label for="cityInput">Destination: </label>
-          <input type="text" id="cityInput" placeholder="enter your destination here">
-        </div>
-        <button class="btn-grad" id="search" type="submit">Go!</button>
       </div>
-      <div class="holder_entry">
-        <img id="picture" src="" class="responsive"></img>
-        <div id="icon"></div>
-        <div id="city"></div>
-        <div id="days"></div>
-        <div id="tripLength"></div>
-        <div id="capital"></div>
-        <div id="country"></div>
-        <div id="currentWeather"></div>
-        <div id="map"></div>
-      </div>
+    </div>
     </main>
-  </div>
+    </div>
+</main>
+
   <footer>
     <p>&copy Copyright: Mark Goudie 2021</p>
   </footer>

@@ -54,7 +54,7 @@ app.get("/getKey", (req, res) => {
   });
 });
 
-const port = 3000;
+const port = 8080;
 const server = app.listen(port, () =>
   console.log(`Server is running on localhost:${port}`)
 );

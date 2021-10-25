@@ -35,7 +35,7 @@ const GOOGLE_API_KEY = "AIzaSyCTjMUnkF9ycmBqFcgIWKET8xDx9gCz_qU";
 // Event listener to add function to existing HTML DOM element
 
 document
-  .getElementById("search")
+  .getElementById("generate")
   .addEventListener("click", generateCoordinates);
 
 // Function called by event listener //
@@ -44,8 +44,8 @@ export async function generateCoordinates(e) {
   e.preventDefault();
 
   const cityInput = document.getElementById("cityInput").value;
-  const arrival = document.getElementById("arrival").valueAsDate;
-  const departure = document.getElementById("departure").valueAsDate;
+  const arrival = document.getElementById("departure").valueAsDate;
+  const departure = document.getElementById("arrival").valueAsDate;
   const countdown = getCountdown(arrival);
   const tripLength = getTripLength(arrival, departure);
 
@@ -75,7 +75,7 @@ export async function generateCoordinates(e) {
   const imageURL =
     "https://www.weatherbit.io/static/img/icons/" + icon + ".png";
 
-  await postData("http://localhost:3000/create", {
+  await postData("http://localhost:8080/create", {
     dateToday: dateToday,
     weatherData: weatherData,
     city: cityInput,

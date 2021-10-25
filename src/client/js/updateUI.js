@@ -1,7 +1,7 @@
 // Function to update UI //
 
 const updateUI = async (webformatURL) => {
-  const request = await fetch("http://localhost:3000/all");
+  const request = await fetch("http://localhost:8080/all");
   try {
     const allData = await request.json();
     document.getElementById(
