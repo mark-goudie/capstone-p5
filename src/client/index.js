@@ -7,6 +7,7 @@ import { updateUI } from "./js/updateUI";
 import "../client/styles/style.scss";
 import "../client/styles/general.scss";
 import "../client/styles/queries.scss";
+import "./media/main_holder.jpg";
 
 export {
   generateCoordinates,

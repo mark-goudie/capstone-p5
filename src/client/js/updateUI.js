@@ -18,7 +18,7 @@ const updateUI = async (webformatURL) => {
     ).innerHTML = `Your destination is: ${allData.city}`;
     document.getElementById(
       "days"
-    ).innerHTML = `You will be departing in: ${allData.days}`;
+    ).innerHTML = `You will be departing in: ${allData.days} day(s)`;
     document.getElementById(
       "tripLength"
     ).innerHTML = `The total length of your trip is: ${allData.tripLength} day(s)`;
