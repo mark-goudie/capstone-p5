@@ -16,62 +16,53 @@
   </head>
 
 <body>
-  <main class="container">
+  <main class="border">
     <div class="container">
       <h1> Travel Planner </h1>
+      <div id="dateToday"></div>
         <div class="grid">
           <div class = "contentbox">
-            <div id="dateToday"></div>
-
             <form class="">
               <label for="departure">When you would like to depart?</label>
-
-<!-- 
-              <div class="form">
-                <div class="departure_date"> -->
-                  
-                  <!-- <label for="date">Departure Date: </label> -->
-                  
-                  <input id="departure" type="date" value="" placeholder="dd/mm/yyyy">
-                <!-- </div>
-                <div class="arrival_date"> -->
-                  <label for="arrival">When would you like to arrive?</label>
-                  <input id="arrival" type="date" value="" placeholder="dd/mm/yyyy">
-                <!-- </div>
-                <div class="holder_city"> -->
-                  <label for="cityInput">Please enter your desired destination:</label>
-                  <input id="cityInput" type="text" name="input" value="" placeholder="Example: Melbourne">
-                <!-- </div> -->
-                <button class="btn-cta" id="generate" type="submit" value="submit">Let's Go!</button>
-              </form>
-            </div>
-          <div class="holder_entry">
-            <img id="picture" src="" class="responsive"></img>
+              <input id="departure" type="date" value="" placeholder="dd/mm/yyyy">
+              <label for="arrival">When would you like to arrive?</label>
+              <input id="arrival" type="date" value="" placeholder="dd/mm/yyyy">
+              <label for="cityInput">Please enter your desired destination:</label>
+              <input id="cityInput" type="text" name="input" value="" placeholder="Example: Melbourne">
+              <button class="btn-cta" id="generate" type="submit" value="submit">Let's Go!</button>
+            </form>
           </div>
+          <div>
+            <img
+            src="../media/main_holder.png"
+            class="holdingImage"
+            id="picture"
+            alt="Map, camera, guides and satchel"
+            />
+            <span class="holder_entry">
+              <img id="picture" src="" class="holdingImage"></img>
+            </span>
           </div>
-          <div class="container">
-
-            <div id="icon"></div>
+        </div>
+        <div class="grid">
+          <div class="contentbox">
             <div id="city"></div>
             <div id="days"></div>
             <div id="tripLength"></div>
-            <div id="capital"></div>
             <div id="country"></div>
+            <div id="capital"></div>
             <div id="currentWeather"></div>
-            <div id="map"></div>
+            <div id="icon"></div>
           </div>
+          <div id="map" class="map"></div>
         </div>
       </div>
     </div>
-    </main>
-    </div>
-</main>
-
+  </main>
   <footer>
     <p>&copy Copyright: Mark Goudie 2021</p>
   </footer>
 </body>
-
 </html>
 
 

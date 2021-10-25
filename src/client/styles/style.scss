@@ -1,6 +1,12 @@
+.border {
+  background-color: #eae7dc;
+  padding: 3.6rem;
+}
+
 .container {
   background-color: #fff;
   padding: 3.6rem;
+  border-radius: 9px;
 }
 
 .grid {
@@ -9,8 +15,8 @@
   margin: 0 auto;
   padding: 0 3.2rem;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 7.2rem;
+  align-items: flex-start;
+  gap: 6.2rem;
 }
 
 .contentbox {
@@ -53,10 +59,6 @@ button {
   padding: 1.2rem;
 }
 
-.cta-text-box {
-  padding: 2.4rem 4.8rem 2.4rem 2.4rem;
-}
-
 .btn-cta,
 .btn-cta:link,
 .btn-cta:visited {
@@ -72,7 +74,7 @@ button {
   cursor: pointer;
   font-family: inherit;
   text-decoration: none;
-  margin-top: 2.4rem;
+  margin: 2.4rem 0 4.8rem 0;
 }
 
 .btn-cta:hover,
@@ -90,30 +92,43 @@ h1 {
   padding-left: 3.2rem;
 }
 
-.myInput {
-  margin-bottom: 2.4rem;
-}
-
-.title {
+.holdingImage {
+  width: 100%;
+  background-size: cover;
   display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-bottom: 3rem;
+  margin: 0 auto;
+  opacity: 0.7;
+  overflow: hidden;
+  filter: drop-shadow(0 2.4rem 4.8rem rgba(0, 0, 0, 0.075));
+  border-radius: 9px;
 }
 
-#dateToday,
+.map {
+  width: 100%;
+  background-size: cover;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.9;
+  overflow: hidden;
+  filter: drop-shadow(0 2.4rem 4.8rem rgba(0, 0, 0, 0.075));
+  border-radius: 9px;
+}
+
 #city,
 #days,
 #tripLength,
 #capital,
-#country {
+#country,
+#currentWeather {
   font-size: 1.6rem;
   font-weight: 500;
   padding: 0 0 1.2rem 0;
 }
 
-#content {
-  font-size: 1.4rem;
+#dateToday {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0 0 4.8rem 3.2rem;
 }
 
 footer {

@@ -13,23 +13,23 @@ const updateUI = async (webformatURL) => {
     document.getElementById("map").innerHTML = `<img src=${allData.map}>`;
     document.getElementById(
       "city"
-    ).innerHTML = `Your trip's destination is: ${allData.city}`;
+    ).innerHTML = `Your destination is: ${allData.city}`;
     document.getElementById(
       "days"
-    ).innerHTML = `Only ${allData.days} days to go!`;
+    ).innerHTML = `You will be departing in: ${allData.days}`;
     document.getElementById(
       "tripLength"
-    ).innerHTML = `Your trip will last ${allData.tripLength} days`;
+    ).innerHTML = `The total length of your trip is: ${allData.tripLength} day(s)`;
     document.getElementById(
       "capital"
-    ).innerHTML = `This capital city is: ${allData.capital}`;
+    ).innerHTML = `The capital city of ${allData.countryData} is: ${allData.capital}`;
     document.getElementById(
       "country"
-    ).innerHTML = `Country: ${allData.countryData}`;
+    ).innerHTML = `The country you are visiting is: ${allData.countryData}`;
     // if (allData.days <= 7) {
     document.getElementById(
       "currentWeather"
-    ).innerHTML = `Current weather is: ${allData.weatherData.data[0].temp}°C`;
+    ).innerHTML = `The current weather in ${allData.city} is: ${allData.weatherData.data[0].temp}°C`;
   } catch (error) {
     console.log("error", error);
   }
