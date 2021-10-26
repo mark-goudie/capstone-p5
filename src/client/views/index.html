@@ -62,5 +62,12 @@
   <footer>
     <p>&copy Copyright: Mark Goudie 2021</p>
   </footer>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/service-worker.js");
+      });
+    }
+  </script>
 </body>
 </html>

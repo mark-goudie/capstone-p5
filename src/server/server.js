@@ -42,8 +42,6 @@ app.get("/", function (req, res) {
   res.sendFile(path.resolve("dist/index.html"));
 });
 
-// Setup Server
-
 app.get("/getKey", (req, res) => {
   res.send({
     GEONAMES_USERNAME: GEONAMES_USERNAME,
@@ -80,3 +78,11 @@ app.post("/create", function (req, res) {
   projectData = req.body;
   res.send(projectData);
 });
+
+// Express test
+
+app.get("/test", async (req, res) => {
+  res.json({ message: "Passed!" });
+});
+
+module.exports = app;
