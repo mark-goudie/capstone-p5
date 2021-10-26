@@ -7,7 +7,8 @@ import { updateUI } from "./js/updateUI";
 import "../client/styles/style.scss";
 import "../client/styles/general.scss";
 import "../client/styles/queries.scss";
-import "./media/main_holder.jpg";
+
+import image from "./media/main_holder.jpg";
 
 export {
   generateCoordinates,
@@ -16,4 +17,5 @@ export {
   getCountdown,
   getTripLength,
   updateUI,
+  image,
 };

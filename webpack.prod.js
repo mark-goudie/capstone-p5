@@ -29,14 +29,23 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]",
-        },
+        test: /\.(png|jpe?g|svg)?$/,
+        use: [
+          "file-loader",
+          {
+            loader: "image-webpack-loader",
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65,
+              },
+            },
+          },
+        ],
       },
     ],
   },
+
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/client/views/index.html",

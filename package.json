@@ -18,6 +18,8 @@
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
+    "image-webpack-loader": "^8.0.1",
+    "url-loader": "^4.1.1",
     "webpack": "^4.46.0",
     "webpack-cli": "^4.8.0"
   },
