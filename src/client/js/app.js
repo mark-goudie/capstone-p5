@@ -10,27 +10,27 @@ let dateToday = d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear();
 // Geonames data //
 
 const baseURL = "http://api.geonames.org/searchJSON?";
-const GEONAMES_USERNAME = "markgoudie";
+const GEONAMES_USERNAME = "";
 
 // Weatherbit data //
 
-const WEATHERBIT_API_KEY = "07baaa66d9474c75b4e1b85d129a82ec";
+const WEATHERBIT_API_KEY = "";
 const weatherbitURL = "http://api.weatherbit.io/v2.0/current?";
 
 // Pixabay data //
 
 const pixabayURL = "https://pixabay.com/api/?";
-const PIXABAY_API_KEY = "23770721-9e6b37df3a019ae92c78a3c3a";
+const PIXABAY_API_KEY = "";
 
 // Rest Countries //
 
 const restCountriesURL = "http://api.countrylayer.com/v2/name/";
-const REST_API_KEY = "2192a2fb4c9b216a7d577ca52001cced";
+const REST_API_KEY = "";
 
 // Google Maps //
 
 const googleMapsURL = "https://maps.googleapis.com/maps/api/staticmap?center=";
-const GOOGLE_API_KEY = "AIzaSyCTjMUnkF9ycmBqFcgIWKET8xDx9gCz_qU";
+const GOOGLE_API_KEY = "";
 
 // Event listener to add function to existing HTML DOM element
 
